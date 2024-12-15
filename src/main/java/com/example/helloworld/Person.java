@@ -8,15 +8,17 @@ public class Person {
 
     @Id
     private Long id;
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
 
     // Constructors, getters, setters
     public Person() {}
 
-    public Person(Long id, String name, String email) {
+    public Person(Long id, String firstName, String lastName, String email) {
         this.id = id;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
     }
 
@@ -29,11 +31,15 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return firstName + lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
